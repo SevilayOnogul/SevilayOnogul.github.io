@@ -144,7 +144,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    justify-content: center; 
+    justify-content: center;
     justify-items: center;
 }
 
@@ -160,8 +160,12 @@ section {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
+
 .skills-category.full {
-    grid-column: span 2;
+    grid-column: 1 / -1;
+    width: 100%;
+    max-width: 800px;
+    justify-self: center;
 }
 
 .skills-category h3 {
@@ -198,11 +202,15 @@ section {
     background-color: #f8f8f8;
 }
 
-.myProjects {
+.myProjects img {
     width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding-bottom: 60px;
+    max-width: 800px;
+    height: auto;
+    min-height: 400px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .myProjects .swiper-wrapper {
